@@ -1,8 +1,8 @@
-ImapBundle
+LdapBundle
 =============
-[![Build Status](https://travis-ci.org/ComuneFI/ImapBundle.svg?branch=master)]
-(https://travis-ci.org/ComuneFI/ImapBundle) [![Coverage Status](https://img.shields.io/coveralls/ComuneFI/ImapBundle.svg)] 
-(https://coveralls.io/r/ComuneFI/ImapBundle)
+[![Build Status](https://travis-ci.org/ComuneFI/LdapBundle.svg?branch=master)]
+(https://travis-ci.org/ComuneFI/LdapBundle) [![Coverage Status](https://img.shields.io/coveralls/ComuneFI/LdapBundle.svg)] 
+(https://coveralls.io/r/ComuneFI/LdapBundle)
 
 =============
 
@@ -15,5 +15,5 @@ Installazione:
 ```
 - Aggiungere nel file app/AppKernel.php nella funzione registerBundles;
 ```
-    new Fi\ImapBundle\FiImapBundle(),
+    new Fi\LdapBundle\FiLdapBundle(),
 ```
