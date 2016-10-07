@@ -1,0 +1,7 @@
+parameters:
+  fiLdap.class: Fi\LdapBundle\DependencyInjection\FiLdap
+  
+services:
+  ldap_manager:
+      class:     "%fiLdap.class%"
+      arguments: [%connessione_ldap%]
