@@ -16,11 +16,11 @@ parameters:
     temascelto: sunny
 
     connessione_ldap:
-        username: CN=userldap,OU=Utenti,OU=CdFsys,DC=dominio,DC=it
+        username: CN=userldap,OU=Utenti,OU=UnitaOrganizzativa,DC=dominio,DC=it
         password: passwordldap
-        host: ldap.comune.intranet
+        host: ldap.dominio.it
         port: 389
-        basedn: OU=Utenti,OU=CdF,DC=dominio,DC=it
+        basedn: OU=Utenti,OU=UnitaOrganizzativa,DC=dominio,DC=it
         userfilter: (&(objectClass=user))
         attribute:
             - "samaccountname"
