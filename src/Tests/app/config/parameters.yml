@@ -16,10 +16,10 @@ parameters:
     temascelto: sunny
 
     connessione_ldap:
-        username: CN=admin,dc=example,dc=com
+        username: cn=admin,dc=example,dc=com
         password: test
         host: localhost
-        port: 389
+        port: 3389
         basedn: dc=example,dc=com
         userfilter: (&(objectClass=user))
         attribute:
@@ -30,17 +30,3 @@ parameters:
             - "cn"
             - "givenname"
             - "name"
-            - "description"
-            - "physicaldeliveryofficename"
-            - "distinguishedname"
-            - "whencreated"
-            - "memberof"
-            - "department"
-            - "company"
-            - "lastlogon"
-            - "thumbnailphoto"
-            - "pwdlastset"
-            - "accountexpires"
-            - "userprincipalname"
-            - "objectcategory"
-
