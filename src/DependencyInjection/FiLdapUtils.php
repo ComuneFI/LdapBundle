@@ -60,4 +60,9 @@ class FiLdapUtils
     {
         return (isset($parms['attribute']) && is_array($parms['attribute'])) ? $parms['attribute'] : $this->attributi;
     }
+
+    public static function getLdapUsernameUtenti($parms)
+    {
+        return self::getLdapUsernameParam($parms);
+    }
 }

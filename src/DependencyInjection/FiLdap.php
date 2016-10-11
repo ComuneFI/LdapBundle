@@ -27,11 +27,6 @@ class FiLdap
         $this->connect();
     }
 
-    private function getLdapUsernameUtenti($parms)
-    {
-        return FiLdapUtils::getLdapUsernameParam($parms);
-    }
-
     public function getUtenti($parms = array())
     {
         $base_dn = FiLdapUtils::getLdapBasednUtenti($parms);
