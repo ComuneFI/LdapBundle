@@ -42,7 +42,9 @@ class FiLdapTest extends KernelTestCase
         $parms['username'] = $ldapparms['username'];
         $parms['password'] = $ldapparms['password'];
         $parms['basedn'] = $ldapparms['basedn'];
-        $parms['userfilter'] = '(&(objectClass=user)(!(cn=u*))(!(cn=*x))(!(cn=U*))(!(cn=T*))(!(cn=t*))(!(cn=c*))(!(cn=C*))(!(cn=i*))(!(cn=I*))(!(cn=a*))(!(cn=A*)))';
+        $query = '(&(objectClass=user)'
+                .'(!(cn=u*))(!(cn=*x))(!(cn=U*))(!(cn=T*))(!(cn=t*))(!(cn=c*))(!(cn=C*))(!(cn=i*))(!(cn=I*))(!(cn=a*))(!(cn=A*)))';
+        $parms['userfilter'] = $query;
         $parms['attribute'] = $ldapparms['attribute'];
 
         return $parms;
