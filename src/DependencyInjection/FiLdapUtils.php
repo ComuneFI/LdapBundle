@@ -45,24 +45,4 @@ class FiLdapUtils
     {
         return (isset($parms['attribute'])) ? $parms['attribute'] : array();
     }
-
-    public static function getLdapBasednUtenti($parms)
-    {
-        return (isset($parms['base_dn'])) ? $parms['base_dn'] : $this->basedn;
-    }
-
-    public static function getLdapUserFilterUtenti($parms)
-    {
-        return (isset($parms['filter'])) ? $parms['filter'] : $this->filterutenti;
-    }
-
-    public static function getLdapAttributeUtenti($parms)
-    {
-        return (isset($parms['attribute']) && is_array($parms['attribute'])) ? $parms['attribute'] : $this->attributi;
-    }
-
-    public static function getLdapUsernameUtenti($parms)
-    {
-        return self::getLdapUsernameParam($parms);
-    }
 }

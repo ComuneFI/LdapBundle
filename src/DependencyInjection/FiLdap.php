@@ -29,9 +29,9 @@ class FiLdap
 
     public function getUtenti($parms = array())
     {
-        $base_dn = FiLdapUtils::getLdapBasednUtenti($parms);
-        $filter = FiLdapUtils::getLdapUserFilterUtenti($parms);
-        $attributi = FiLdapUtils::getLdapAttributeUtenti($parms);
+        $base_dn = $this->getLdapBasednUtenti($parms);
+        $filter = $this->getLdapUserFilterUtenti($parms);
+        $attributi = $this->getLdapAttributeUtenti($parms);
 
         $read = ldap_search($this->connection, $base_dn, $filter, $attributi);
 
@@ -64,13 +64,13 @@ class FiLdap
 
     public function getUserInformation($parms = array())
     {
-        $base_dn = FiLdapUtils::getLdapBasednUtenti($parms);
-        $username = FiLdapUtils::getLdapUsernameUtenti($parms);
+        $base_dn = $this->getLdapBasednUtenti($parms);
+        $username = $this->getLdapUsernameUtenti($parms);
 
         if (strlen($username) > 0) {
             $filter = "(&(objectClass=user)(cn=$username))";
         } else {
-            $filter = FiLdapUtils::getLdapUserFilterUtenti($parms);
+            $filter = $this->getLdapUserFilterUtenti($parms);
         }
 
         $read = ldap_search($this->connection, $base_dn, $filter);
@@ -153,9 +153,9 @@ class FiLdap
 
     public function dumpUtenti($parms = array())
     {
-        $base_dn = FiLdapUtils::getLdapBasednUtenti($parms);
-        $filter = FiLdapUtils::getLdapUserFilterUtenti($parms);
-        $attributi = FiLdapUtils::getLdapAttributeUtenti($parms);
+        $base_dn = $this->getLdapBasednUtenti($parms);
+        $filter = $this->getLdapUserFilterUtenti($parms);
+        $attributi = $this->getLdapAttributeUtenti($parms);
 
         if (count($attributi) === 0) {
             $read = ldap_search($this->connection, $base_dn, $filter);
@@ -199,5 +199,25 @@ class FiLdap
             }
             echo '<br/>';
         }
+    }
+
+    private function getLdapBasednUtenti($parms)
+    {
+        return (isset($parms['base_dn'])) ? $parms['base_dn'] : $this->basedn;
+    }
+
+    private function getLdapUserFilterUtenti($parms)
+    {
+        return (isset($parms['filter'])) ? $parms['filter'] : $this->filterutenti;
+    }
+
+    private function getLdapAttributeUtenti($parms)
+    {
+        return (isset($parms['attribute']) && is_array($parms['attribute'])) ? $parms['attribute'] : $this->attributi;
+    }
+
+    private function getLdapUsernameUtenti($parms)
+    {
+        return $this->getLdapUsernameParam($parms);
     }
 }
