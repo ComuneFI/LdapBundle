@@ -16,11 +16,11 @@ parameters:
     temascelto: sunny
 
     connessione_ldap:
-        username: CN=admin,dc=example,dc=com
+        username: CN=admin,dc=test,dc=com
         password: test
         host: localhost
         port: 389
-        basedn: dc=example,dc=com
+        basedn: dc=test,dc=com
         userfilter: (&(objectClass=user))
         attribute:
             - "samaccountname"
