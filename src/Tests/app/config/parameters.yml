@@ -16,7 +16,7 @@ parameters:
     temascelto: sunny
 
     connessione_ldap:
-        username: CN=admin,dc=test,dc=com
+        username: CN=admin,dc=example,dc=com
         password: test
         host: localhost
         port: 389
