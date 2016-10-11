@@ -8,10 +8,6 @@
 /src/Tests/app/SymfonyRequirements.php
 /src/Tests/app/check.php
 
-# Parameters
-/src/Tests/app/config/parameters.yml
-/src/Tests/app/config/parameters.ini
-
 !.gitignore
 /nbproject/private/
 

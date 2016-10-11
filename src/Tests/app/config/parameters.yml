@@ -1,0 +1,46 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_sqlite
+    database_host: null
+    database_port: null
+    database_name: '%kernel.root_dir%/dbtest.sqlite'
+    database_path: '%kernel.root_dir%/dbtest.sqlite'
+    database_user: null
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: null
+    mailer_user: null
+    mailer_password: null
+    locale: it
+    secret: ThisTokenIsNotSoSecretChangeIt
+    temascelto: sunny
+
+    connessione_ldap:
+        username: CN=admin,dc=example,dc=com
+        password: test
+        host: localhost
+        port: 389
+        basedn: dc=example,dc=com
+        userfilter: (&(objectClass=user))
+        attribute:
+            - "samaccountname"
+            - "mail"
+            - "displayname"
+            - "sn"
+            - "cn"
+            - "givenname"
+            - "name"
+            - "description"
+            - "physicaldeliveryofficename"
+            - "distinguishedname"
+            - "whencreated"
+            - "memberof"
+            - "department"
+            - "company"
+            - "lastlogon"
+            - "thumbnailphoto"
+            - "pwdlastset"
+            - "accountexpires"
+            - "userprincipalname"
+            - "objectcategory"
+
