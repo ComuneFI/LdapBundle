@@ -20,7 +20,7 @@ parameters:
         password: test
         host: localhost
         port: 389
-        basedn: dc=test,dc=com
+        basedn: dc=example,dc=com
         userfilter: (&(objectClass=user))
         attribute:
             - "samaccountname"
